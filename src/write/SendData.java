@@ -17,6 +17,7 @@ public class SendData {
 
 	}
 
+	
 	public void sendData(String msg) {
 
 		try {

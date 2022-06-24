@@ -12,15 +12,14 @@ public class CommandParse {
 
 			if (msg.startsWith("normal")) {
 				System.out.println("Msg : " + msgs[1]);
-			} 
-			else if(msg.startsWith("hardReset")) {
+			} else if (msg.startsWith("hardReset")) {
 				Mycommand.hardReset();
-			}
-			else if (msg.startsWith("connect")) {
-				SerialCommunicator sr=new SerialCommunicator();
+			} else if (msg.startsWith("refresh")) {
+				Mycommand.refresh();
+			} else if (msg.startsWith("connect")) {
+				SerialCommunicator sr = new SerialCommunicator();
 				sr.connect(msgs[1]);
-			}
-			else if (msg.startsWith("setLacthing")) {
+			} else if (msg.startsWith("setLacthing")) {
 
 				Mycommand.setLacthing(msgs[1], Integer.parseInt(msgs[2]));
 
@@ -52,21 +51,21 @@ public class CommandParse {
 				Mycommand.setDACValue(msgs[1].charAt(0), Integer.parseInt(msgs[2]), Integer.parseInt(msgs[3]));
 
 			} else if (msg.startsWith("startADC")) {
-				
+
 				Mycommand.startADC(Integer.parseInt(msgs[1]));
 
 			} else if (msg.startsWith("stopADC")) {
-				
+
 				Mycommand.stopADC(Integer.parseInt(msgs[1]));
 
 			} else if (msg.startsWith("setDelay")) {
-				
+
 				Mycommand.setDelay(Integer.parseInt(msgs[1]), Integer.parseInt(msgs[2]));
 
 			} else if (msg.startsWith("sendAdcEnableBits")) {
 
 				Mycommand.sendAdcEnableBits(msgs[1], Integer.parseInt(msgs[1]));
-				
+
 			}
 		} catch (Exception e) {
 

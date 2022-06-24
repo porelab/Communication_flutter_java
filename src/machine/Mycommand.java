@@ -46,6 +46,12 @@ public class Mycommand {
 		
 	}
 	
+	public static void refresh() {
+		writeFormat wrD = new writeFormat();
+		wrD.stopTN();
+		wrD.addLast();
+		sendData(wrD,0);
+	}
 	
 	public static void setLacthing(String ss,int slp)
     {
