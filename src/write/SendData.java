@@ -4,12 +4,12 @@ import mypack.Constants;
 
 public class SendData {
 
-	public void send(SendObj data) {
+	public static void sendData(SendObj data) {
 		try {
 
 			if (data != null)
 				Constants.dout.write(new String("data:" + data.toString()).getBytes());
-
+ 
 		} catch (Exception e) {
 
 			System.out.println("error in sending data to software : " + e);
@@ -18,7 +18,7 @@ public class SendData {
 	}
 
 	
-	public void sendData(String msg) {
+	public static void sendData(String msg) {
 
 		try {
 

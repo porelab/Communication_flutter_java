@@ -42,7 +42,9 @@ public class ReadData extends Thread {
 					}
 					
 					
+					
 				//	System.out.println("Msg re : "+msg);
+					isRead=false;
 
 				} catch (Exception e) {
 					

@@ -2,6 +2,7 @@ package read;
 
 import machine.Mycommand;
 import machine.SerialCommunicator;
+import write.SendData;
 
 public class CommandParse {
 
@@ -12,10 +13,11 @@ public class CommandParse {
 
 			if (msg.startsWith("normal")) {
 				System.out.println("Msg : " + msgs[1]);
+				SendData.sendData("hello");
 			} else if (msg.startsWith("hardReset")) {
 				Mycommand.hardReset();
 			} else if (msg.startsWith("refresh")) {
-				Mycommand.refresh();
+			//	Mycommand.refresh();
 			} else if (msg.startsWith("connect")) {
 				SerialCommunicator sr = new SerialCommunicator();
 				sr.connect(msgs[1]);

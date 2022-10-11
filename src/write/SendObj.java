@@ -6,9 +6,9 @@ import org.json.simple.JSONObject;
 
 public class SendObj {
 	
-	Map<String,String> data;
+	Map<String,Object> data;
 	
-	public SendObj(Map<String,String> data) {
+	public SendObj(Map<String,Object> data) {
 		this.data=data;
 	}
 	
