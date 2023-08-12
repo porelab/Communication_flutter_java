@@ -18,6 +18,9 @@ public class Mycommand {
 				@Override
 				public void run() {
 
+					
+				
+					
 					Constants.serialPort.setDTR(true);
 					try {
 						Thread.sleep(200);

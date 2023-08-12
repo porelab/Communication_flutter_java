@@ -58,7 +58,7 @@ public class SerialCommunicator {
 				Constants.serialPort.addEventListener(Constants.sr);
 				Constants.serialPort.notifyOnDataAvailable(true);
 
-				 Mycommand.hardReset();
+				Mycommand.hardReset();
 				 
 
 			} else {
